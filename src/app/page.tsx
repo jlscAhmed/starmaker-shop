@@ -100,6 +100,64 @@ export default function Home() {
 
   </div>
 </section>
+<section className="max-w-7xl mx-auto px-6 py-16">
+
+  <h2 className="text-center text-5xl font-black text-yellow-400 mb-12">
+    اختر الباقة المناسبة
+  </h2>
+
+  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+    {currentPackages.map((pkg) => (
+
+      <div
+        key={pkg.coins}
+        className="
+        bg-black/70
+        border
+        border-yellow-500/30
+        rounded-3xl
+        p-6
+        text-center
+        hover:scale-105
+        hover:border-yellow-400
+        transition
+        cursor-pointer
+        "
+      >
+
+        <div className="flex justify-center mb-4">
+          <Image
+            src="/images/coin.png"
+            alt="coin"
+            width={70}
+            height={70}
+          />
+        </div>
+
+        <h3 className="text-4xl font-black text-yellow-400">
+          {pkg.coins}
+        </h3>
+
+        <p className="text-gray-400 mt-2">
+          COINS
+        </p>
+
+        <div className="mt-4 text-3xl font-bold">
+          {pkg.price}
+        </div>
+
+        <div className="text-gray-500">
+          {country === "egypt" ? "جنيه" : "ريال"}
+        </div>
+
+      </div>
+
+    ))}
+
+  </div>
+
+</section>
        <section
   id="packages"
   className="max-w-7xl mx-auto px-6 pb-20"
