@@ -28,3 +28,6 @@ body {
     0 0 50px rgba(234,179,8,.25);
 }
 
+html {
+  scroll-behavior: smooth;
+}

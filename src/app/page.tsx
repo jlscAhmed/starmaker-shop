@@ -91,13 +91,19 @@ export default function Home() {
       شحن كوينزات StarMaker
     </p>
 
-    <button className="mt-8 px-8 py-4 bg-yellow-500 text-black rounded-2xl font-bold">
-      اختر الباقة الآن
-    </button>
+    <a
+  href="#packages"
+  className="inline-block bg-yellow-500 text-black px-10 py-4 rounded-2xl font-bold hover:scale-105 transition"
+>
+  اختر الباقة الآن
+</a>
 
   </div>
 </section>
-       <section className="max-w-5xl mx-auto px-6 pb-20">
+       <section
+  id="packages"
+  className="max-w-7xl mx-auto px-6 pb-20"
+>
   <div className="bg-black/40 border border-fuchsia-500/50 rounded-3xl p-8">
 
     <h2 className="text-3xl font-bold text-center mb-8">
