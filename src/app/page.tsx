@@ -64,109 +64,39 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section
+  className="
+  relative
+  min-h-screen
+  bg-cover
+  bg-center
+  flex
+  items-center
+  justify-center
+  text-center
+  "
+  style={{
+    backgroundImage: "url('/images/coins-banner.png')",
+  }}
+>
+  <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="text-center">
+  <div className="relative z-10">
 
-          <h1 className="text-7xl md:text-8xl font-black text-yellow-400 drop-shadow-lg">
-            COINS
-          </h1>
+    <h1 className="text-7xl font-black text-yellow-400">
+      COINS MART
+    </h1>
 
-          <h2 className="text-7xl md:text-8xl font-black text-yellow-400 -mt-4">
-            MART
-          </h2>
+    <p className="text-3xl mt-4">
+      شحن كوينزات StarMaker
+    </p>
 
-          <p className="text-3xl mt-4">
-            شحن كوينزات
-          </p>
+    <button className="mt-8 px-8 py-4 bg-yellow-500 text-black rounded-2xl font-bold">
+      اختر الباقة الآن
+    </button>
 
-          <div className="flex justify-center mt-4">
-          <Image
-            src="/images/starmaker.png"
-             alt="StarMaker"
-              width={280}
-              height={280}
-            />
-           </div>
-            <div className="flex justify-center gap-4 mt-6">
-
-  <button
-    onClick={() => setCountry("egypt")}
-    className={`px-6 py-3 rounded-2xl transition ${
-      country === "egypt"
-        ? "bg-yellow-500 text-black"
-        : "bg-slate-900 border border-slate-700"
-    }`}
-  >
-    🇪🇬 مصر
-  </button>
-
-  <button
-    onClick={() => setCountry("yemen")}
-    className={`px-6 py-3 rounded-2xl transition ${
-      country === "yemen"
-        ? "bg-yellow-500 text-black"
-        : "bg-slate-900 border border-slate-700"
-    }`}
-  >
-    🇾🇪 اليمن
-  </button>
-
-</div>
-          <div className="flex justify-center gap-6 mt-8 text-yellow-300">
-            <span>⚡ شحن سريع</span>
-            <span>🛡️ آمن 100%</span>
-            <span>💰 أفضل الأسعار</span>
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* Packages */}
-      <section className="max-w-7xl mx-auto px-6 pb-20">
-
-        <h2 className="text-center text-3xl font-bold mb-10">
-          اختر الباقة المناسبة
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-
-          {currentPackages.map((item) => (
-            <div
-              key={item.coins}
-              className="bg-black/40 border border-yellow-500 rounded-3xl p-5 text-center hover:scale-105 hover:shadow-[0_0_25px_gold] transition"
-            >
-              <div className="flex justify-center mb-4">
-             <Image
-             src="/images/coin.png"
-             alt="coin"
-             width={70}
-             height={70}
-              />
-             </div>
-
-              <h3 className="text-4xl font-bold text-yellow-400">
-                {item.coins}
-              </h3>
-
-              <p className="text-gray-300">
-                COINS
-              </p>
-
-              <div className="mt-4 text-3xl font-bold text-yellow-400">
-                {item.price}
-              </div>
-
-               <div className="text-gray-400">
-  {country === "egypt" ? "جنيه" : "ريال"}
-</div>
-            </div>
-          ))}
-
-        </div>
-
-      </section>
+  </div>
+</section>
        <section className="max-w-5xl mx-auto px-6 pb-20">
   <div className="bg-black/40 border border-fuchsia-500/50 rounded-3xl p-8">
 
